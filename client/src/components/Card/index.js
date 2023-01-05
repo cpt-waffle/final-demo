@@ -3,7 +3,7 @@ import './index.css';
 const Card = props => {
 
   return (<div>
-    <img src={props.img}/>
+    <img className="card--img" src={props.url}/>
   </div>)
 }
 
