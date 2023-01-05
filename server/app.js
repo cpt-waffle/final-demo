@@ -14,20 +14,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-console.log("-------------------");
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-console.log("-------------------");
-console.log("-------------------");
-
 app.use('/dogs', dogsRouter);
-console.log("-------------------");
 
-console.log("-------------------");console.log("-------------------");console.log("-------------------");
 console.log("-------------------");
+console.log('++++++++++++');
 
 module.exports = app;
-
-console.log("-------------------");
-
