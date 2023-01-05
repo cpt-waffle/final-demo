@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import {useEffect, useState} from 'react';
+import Card from './components/Card';
 
 function App() {
+
+  const [dogs, setDogs] = useState([]);
+
+  useEffect(() => {
+    axios.get('/dogs').then(res => {
+      console.log(res.data);
+      setDogs(res.data);
+    })
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Dogs</h1>
+      {dogs.map(dog => <Card url={dog.url}/>)}
     </div>
   );
 }
