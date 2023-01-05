@@ -15,8 +15,40 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+console.log('++++++++++++');
+console.log('++++++++++++');
+console.log('++++++++++++');
+
 app.use('/', indexRouter);
+console.log('++++++++++++');
+console.log('++++++++++++');
+console.log('++++++++++++');
+console.log('++++++++++++');
+
+
+
 app.use('/users', usersRouter);
+console.log('++++++++++++');
+console.log('++++++++++++');
+console.log('++++++++++++');
+console.log('++++++++++++');
+
 app.use('/dogs', dogsRouter);
+console.log('++++++++++++');
+console.log('++++++++++++');
+console.log('++++++++++++');
+
+console.log('++++++++++++');
+console.log('++++++++++++');
+console.log('++++++++++++');
+
+console.log('++++++++++++');
+console.log('++++++++++++');
+console.log('++++++++++++');
+
+
+
+
+
 
 module.exports = app;
