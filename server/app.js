@@ -24,7 +24,7 @@ console.log("-------------------");
 app.use('/dogs', dogsRouter);
 console.log("-------------------");
 
-
+console.log("-------------------");console.log("-------------------");console.log("-------------------");
 console.log("-------------------");
 
 module.exports = app;
